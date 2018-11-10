@@ -10,13 +10,20 @@ const IndexPage = ({ data }) => (
     <div className="hero">
       <p className="hero__text--first">Hello, my name is</p>
 
-      <Img className="hero__img" fluid={data.heroImage.childImageSharp.fluid} />
+      <div className="hero__header">
+        <div className="hero__main">
+          <Img
+            className="hero__img"
+            fluid={data.heroImage.childImageSharp.fluid}
+          />
 
-      <h1 className="hero__title">Gabor Bencsik</h1>
+          <h1 className="hero__title">Gabor Bencsik</h1>
+        </div>
+      </div>
 
       <p className="hero__text--second">
-        I'm a Front End developer based in Prague. I build and design clean and
-        responsive web apps.
+        I'm a Front End developer based in Prague.
+        <br />I build and design clean and responsive web apps.
       </p>
 
       <Button

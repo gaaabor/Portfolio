@@ -1,0 +1,48 @@
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+}
+
+.btn-green {
+  background-color: $color-primary;
+  color: $color-white;
+  &:hover,
+  &:active {
+  }
+  .btn__icon {
+    fill: $color-white;
+  }
+}
+
+.btn-ghost {
+  background: none;
+  border: 1px solid $color-white;
+  color: $color-white;
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    .btn__icon {
+      fill: $color-white;
+    }
+  }
+  .btn__icon {
+    fill: $color-white;
+  }
+}
+
+.btn__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.btn__text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 1.5rem;
+}
