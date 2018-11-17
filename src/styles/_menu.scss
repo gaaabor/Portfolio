@@ -1,0 +1,14 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  &__big,
+  &__small {
+    text-align: right;
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    font-weight: 400;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+  }
+}

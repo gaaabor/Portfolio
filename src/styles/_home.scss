@@ -1,27 +1,13 @@
 .hero {
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
-  &__header {
-    margin: 0 auto;
-  }
-  &__text {
-    &--first {
-      font-size: 1.9rem;
-      font-family: $font-secondary;
-      padding-top: 10vh;
-      padding-bottom: 7vh;
-    }
-    &--second {
-      margin-left: auto;
-      font-size: 1.9rem;
-      padding-top: 6vh;
-      font-family: $font-secondary;
-    }
-  }
   &__main {
-    display: grid;
-    grid-template-columns: 2fr 1fr 5fr 1fr;
+    margin: 0 auto;
+    &-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 5fr 1fr;
+    }
   }
   &__img {
     width: 17vw;
@@ -30,14 +16,79 @@
     grid-row: 2;
   }
   &__title {
-    font-family: $font-primary;
+    font-family: $font-secondary;
     white-space: nowrap;
     font-size: 10rem;
+    font-weight: 300;
     color: $color-primary;
     z-index: 2;
     grid-column: 2 / 4;
     grid-row: 1 / 3;
   }
-  &__button {
+  &__text {
+    &--top {
+      font-size: 1.9rem;
+      font-family: $font-primary;
+      padding-top: 10vh;
+      padding-bottom: 7vh;
+      font-weight: 300;
+    }
+    &--bottom {
+      margin-left: auto;
+      font-size: 1.9rem;
+      padding-top: 6vh;
+      font-family: $font-primary;
+      font-weight: 300;
+    }
+  }
+  &__link {
+    font-family: $font-primary;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.hero__cta {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20rem;
+  &--line {
+    border-left: 1px solid $color-black;
+    height: 10rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -0.5px;
+    top: 1.4rem;
+  }
+}
+
+.featured {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    font-family: $font-primary;
+    flex-basis: 40%;
+    h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 2rem 0 1rem 0;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+    p {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+  }
+  &__img {
+    flex-basis: 47%;
+  }
+  &__cta {
   }
 }

@@ -3,21 +3,21 @@ import PropTypes from 'prop-types'
 
 import { Link as Anchor } from 'react-scroll'
 
-const Button = props => (
+const onPageBtn = props => (
   <Anchor
     to={props.to}
     spy={true}
     smooth={true}
     duration={700}
-    className={props.btn}
+    className={`link ${props.block}__link`}
   >
-    <p className="btn__text">{props.text}</p>
+    <p className="link__text">{props.text}</p>
   </Anchor>
 )
 
-export default Button
+export default onPageBtn
 
-Button.propTypes = {
+onPageBtn.propTypes = {
   to: PropTypes.string,
   text: PropTypes.string,
 }
