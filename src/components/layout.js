@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { Link } from 'gatsby'
 import { Link as Anchor } from 'react-scroll'
 import { StaticQuery, graphql } from 'gatsby'
 import Menu from 'react-responsive-navbar'

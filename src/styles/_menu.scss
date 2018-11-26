@@ -1,18 +1,18 @@
 .menu {
-   display: flex;
-   flex-direction: column;
-   &__big,
-   &__small {
-      text-align: right;
-      font-family: $font-primary;
-      font-size: 1.8rem;
-      font-weight: 300;
-      position: fixed;
-      right: 2rem;
-      top: 1rem;
-      cursor: pointer;
-   }
-   a.active {
-      font-weight: 400;
-   }
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  &__big,
+  &__small {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    font-weight: 300;
+    position: fixed;
+    right: 2rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+  a.active {
+    font-weight: 400;
+  }
 }
