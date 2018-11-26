@@ -1,53 +1,24 @@
-.btn {
-   align-self: center;
-   text-align: center;
-   text-transform: uppercase;
-   transition: all 0.2s;
-   cursor: pointer;
-   border-bottom: 5px solid $color-primary;
-   font-size: 1.7rem;
-   font-family: $font-secondary;
-   font-weight: 700;
-}
-
-.btn:hover {
-   font-family: $font-primary;
-}
-
+.btn,
 .btn:link,
 .btn:visited {
-   text-transform: uppercase;
-   text-decoration: none;
-   transition: all 0.2s;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 1rem 3rem;
-   cursor: pointer;
+  color: $color-black;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.btn-green {
-   background-color: $color-primary;
-   color: $color-white;
-   &:hover,
-   &:active {}
-   .btn__icon {
-      fill: $color-white;
-   }
-}
-
-.btn-ghost {
-   background: none;
-   border: 1px solid $color-white;
-   color: $color-white;
-   &:hover {
-      background-color: $color-primary;
-      color: $color-white;
-      .btn__icon {
-         fill: $color-white;
-      }
-   }
-   .btn__icon {
-      fill: $color-white;
-   }
+.btn {
+  &__primary {
+    &--text {
+      display: inline-block;
+      color: $color-black;
+      font-weight: 700 !important;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      border-bottom: 5px solid $color-primary;
+    }
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: underline solid $color-primary !important;
+  }
 }

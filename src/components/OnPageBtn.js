@@ -9,9 +9,9 @@ const onPageBtn = props => (
     spy={true}
     smooth={true}
     duration={700}
-    className={`link ${props.block}__link`}
+    className={`btn btn__${props.type} ${props.className}`}
   >
-    <p className="link__text">{props.text}</p>
+    <p className={`btn__${props.type}--text`}>{props.text}</p>
   </Anchor>
 )
 

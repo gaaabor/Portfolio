@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 const onPageBtn = props => (
-  <Link to={props.to} className={`link ${props.block}__link`}>
-    <p className="btn__text">{props.text}</p>
+  <Link to={props.to} className={`btn btn__${props.type} ${props.className}`}>
+    <p className={`btn__${props.type}--text`}>{props.text}</p>
   </Link>
 )
 
