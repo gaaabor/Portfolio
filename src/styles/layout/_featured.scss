@@ -1,0 +1,71 @@
+.featured {
+  @include respond(tab-lg) {
+    padding-top: 3rem;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18rem;
+    @include respond(tab-lg) {
+      flex-direction: column;
+      margin-bottom: 10rem;
+    }
+  }
+  &__item:nth-of-type(2) {
+    .featured__text {
+      margin-right: 5% !important;
+      @include respond(tab-lg) {
+        margin-right: 0;
+      }
+    }
+    .featured__img {
+      order: -1;
+    }
+  }
+  &__text {
+    align-self: center;
+    font-family: $font-primary;
+    margin-left: 5%;
+    @include respond(tab-lg) {
+      margin-left: 0;
+      margin-bottom: 4rem;
+    }
+    h2 {
+      font-size: 2.7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 2rem 0 0.5rem 0;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+    p {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+  }
+  &__img {
+    flex-basis: 50%;
+    @include respond(tab-lg) {
+      width: 60vw;
+      align-self: center;
+    }
+    @include respond(phone-sm) {
+      width: 90vw;
+    }
+  }
+  &__cta {
+    padding-top: 2rem;
+    @include respond(tab-lg) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &--button {
+      margin-right: 3.5rem;
+      @include respond(tab-lg) {
+        margin-right: 0;
+      }
+    }
+  }
+}

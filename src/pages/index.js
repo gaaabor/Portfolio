@@ -35,120 +35,85 @@ const IndexPage = ({ data }) => (
     </div>
 
     <section className="featured" id="featured">
-      <div className="featured__item cel">
-        <Fade delay={200}>
-          <div className="featured__text">
-            <h3>UI/UX Design, Front End development</h3>
-            {/* <Fade top cascade delay={400} duration={500}> */}
-            <h2>Capoeira Espirito Livre</h2>
-            {/* </Fade> */}
-            <p>Web application for a sport and cultural association</p>
-            <div className="featured__cta">
-              <OnWebBtn
-                to="https://cel-capoeira.com"
-                text="Visit site"
-                type="primary"
-                className="featured__cta--button"
-              />
-              <OnSiteBtn
-                to="/page-2"
-                text="Case Study"
-                type="primary"
-                className="featured__cta--button"
-              />
-            </div>
-          </div>
-        </Fade>
-        <Img
-          className="featured__img"
-          fluid={data.celImage.childImageSharp.fluid}
+      <FeaturedItem
+        title="Capoeira Espirito Livre"
+        text="Web application for a sport and cultural association"
+        fluid={data.celImage.childImageSharp.fluid}
+      >
+        <OnWebBtn
+          to="https://cel-capoeira.com"
+          text="Visit site"
+          type="primary"
+          className="featured__cta--button"
         />
-      </div>
+        <OnSiteBtn
+          to="/page-2"
+          text="Case Study"
+          type="primary"
+          className="featured__cta--button"
+        />
+      </FeaturedItem>
 
-      <div className="featured__item portfolio">
-        <Img
-          className="featured__img"
-          fluid={data.portfolioImage.childImageSharp.fluid}
+      <FeaturedItem
+        title="Personal Portfolio"
+        text="A simple, minimalist site for personal branding"
+        fluid={data.portfolioImage.childImageSharp.fluid}
+      >
+        <OnSiteBtn
+          to="featuredWork"
+          text="View Project"
+          type="primary"
+          className="featured__cta--button"
         />
-        <Fade delay={200}>
-          <div className="featured__text">
-            <h3>UI/UX Design, Front End development</h3>
-            <Fade top cascade delay={400} duration={500}>
-              <h2>Personal Portfolio</h2>
-            </Fade>
-            <p>A simple, minimalist site for personal branding</p>
-            <div className="featured__cta">
-              <OnSiteBtn
-                to="featuredWork"
-                text="View Project"
-                type="primary"
-                className="featured__cta--button"
-              />
-              <OnWebBtn
-                to="https://github.com/gaaabor/Portfolio"
-                text="Code on Github"
-                type="primary"
-                className="featured__cta--button"
-              />
-            </div>
-          </div>
-        </Fade>
-      </div>
+        <OnWebBtn
+          to="https://github.com/gaaabor/Portfolio"
+          text="Code on Github"
+          type="primary"
+          className="featured__cta--button"
+        />
+      </FeaturedItem>
 
-      <div className="featured__item fluent">
-        <Fade delay={200}>
-          <div className="featured__text">
-            <h3>UI/UX Design, Front End development</h3>
-            <Fade top cascade delay={400} duration={500}>
-              <h2>FLUENT ACRHITECT & DESIGN</h2>
-            </Fade>
-            <p>Landing page for a fictional architect's company</p>
-            <div className="featured__cta">
-              <OnWebBtn
-                to="featuredWork"
-                text="Visit site"
-                type="primary"
-                className="featured__cta--button"
-              />
-              <OnWebBtn
-                to="featuredWork"
-                text="Code on Github"
-                type="primary"
-                className="featured__cta--button"
-              />
-            </div>
-          </div>
-        </Fade>
-        <Img
-          className="featured__img"
-          fluid={data.fluentImage.childImageSharp.fluid}
+      <FeaturedItem
+        title="FLUENT ACRHITECT & DESIGN"
+        text="Landing page for a fictional architect's company"
+        fluid={data.fluentImage.childImageSharp.fluid}
+      >
+        <OnWebBtn
+          to="featuredWork"
+          text="Visit site"
+          type="primary"
+          className="featured__cta--button"
         />
-      </div>
+        <OnWebBtn
+          to="featuredWork"
+          text="Code on Github"
+          type="primary"
+          className="featured__cta--button"
+        />
+      </FeaturedItem>
     </section>
+
     <section id="about">
       <h2 className="heading">Skills and Services</h2>
       <div className="skills__table">
-        <Fade duration={500} delay={300} fraction={0.9}>
-          <div className="skills__col">
-            <p className="skills__item">React</p>
-            <p className="skills__item">JavaScript</p>
-            <p className="skills__item">npm</p>
-          </div>
-        </Fade>
-        <Fade duration={500} delay={800} fraction={0.9}>
-          <div className="skills__col">
-            <p className="skills__item">SASS</p>
-            <p className="skills__item">GatsbyJS</p>
-            <p className="skills__item">UI/UX</p>
-          </div>
-        </Fade>
-        <Fade duration={500} delay={1100} fraction={0.9}>
-          <div className="skills__col">
-            <p className="skills__item">HTML/CSS</p>
-            <p className="skills__item">Adobe XD</p>
-            <p className="skills__item">BEM</p>
-          </div>
-        </Fade>
+        <SkillsItem
+          delay={300}
+          skillOne="React"
+          skillTwo="JavaScript"
+          skillThree="npm"
+        />
+        <SkillsItem
+          delay={800}
+          skillOne="SASS"
+          skillTwo="GatsbyJS"
+          skillThree="UI/UX"
+        />
+        <SkillsItem
+          delay={1100}
+          skillOne="HTML/CSS"
+          skillTwo="Adobe XD"
+          skillThree="BEM"
+        />
       </div>
       <div className="about">
         <h2 className="heading">About Me</h2>
@@ -287,3 +252,29 @@ export const homeQuery = graphql`
     }
   }
 `
+
+const FeaturedItem = props => (
+  <div className="featured__item">
+    <Fade delay={200}>
+      <div className="featured__text">
+        <h3>UI/UX Design, Front End development</h3>
+        <Fade top cascade delay={400} duration={500}>
+          <h2>{props.title}</h2>
+        </Fade>
+        <p>{props.text}</p>
+        <div className="featured__cta">{props.children}</div>
+      </div>
+    </Fade>
+    <Img className="featured__img" fluid={props.fluid} />
+  </div>
+)
+
+const SkillsItem = props => (
+  <Fade duration={500} delay={props.delay} fraction={0.9}>
+    <div className="skills__col">
+      <p className="skills__item">{props.skillOne}</p>
+      <p className="skills__item">{props.skillTwo}</p>
+      <p className="skills__item">{props.skillThree}</p>
+    </div>
+  </Fade>
+)

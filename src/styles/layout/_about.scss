@@ -1,0 +1,57 @@
+.skills {
+  width: 100%;
+  margin: 25rem 0 10rem 0;
+  display: flex;
+  flex-direction: column;
+  &__table {
+    display: flex;
+    margin: 8rem auto;
+    justify-content: center;
+  }
+  &__col {
+    display: flex;
+    margin-left: 5rem;
+    flex-direction: column;
+  }
+  &__item {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+}
+
+.about {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+    @include respond(tab-lg) {
+      flex-direction: column;
+    }
+  }
+  &__text {
+    flex-basis: 50%;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.9;
+    &-section {
+      margin-bottom: 4.5rem;
+    }
+    @include respond(tab-lg) {
+      text-align: left !important;
+    }
+  }
+  &__img {
+    flex-basis: 50%;
+    max-width: 46rem;
+    @include respond(tab-lg) {
+      width: 85vw;
+      align-self: center;
+    }
+  }
+  &__resume-btn {
+    display: block !important;
+    text-align: center;
+    margin-top: 10rem;
+  }
+}

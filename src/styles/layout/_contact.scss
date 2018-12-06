@@ -1,0 +1,36 @@
+.contact {
+  min-height: 70vh;
+  margin-top: 20vh;
+  @include respond(tab-lg) {
+    min-height: 50vh;
+  }
+  &__text {
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+  }
+  &__email {
+    font-size: 7rem;
+    font-family: $font-secondary;
+    color: $color-primary;
+    font-weight: 300;
+    text-align: center;
+    margin: 5rem 0;
+    white-space: nowrap;
+    @include respond(tab-lg) {
+      font-size: 9vw;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  &__link {
+    font-size: 1.6rem;
+    padding: 2rem;
+  }
+}
+
+footer {
+  text-align: center;
+}
