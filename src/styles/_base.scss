@@ -8,6 +8,9 @@
 
 html {
    font-size: 62.5%;
+   @include respond(laptop-sm) {
+      font-size: 55%;
+   }
 }
 
 body {
@@ -15,6 +18,9 @@ body {
    background-color: #f8f8ff;
    background-image: url('../images/background.png');
    font-family: $font-primary;
+   @include respond(tab-lg) {
+      text-align: center;
+   }
    @media only screen and (min-width: 1200px) {
       &::-webkit-scrollbar {
          width: 1em;
@@ -33,6 +39,9 @@ body {
    &__container {
       margin: auto;
       max-width: 70vw;
+      @include respond(laptop-lg) {
+         max-width: 80vw;
+      }
    }
 }
 

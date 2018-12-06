@@ -36,22 +36,22 @@ const IndexPage = ({ data }) => (
 
     <section className="featured" id="featured">
       <div className="featured__item cel">
-        <Fade delay={400}>
+        <Fade delay={200}>
           <div className="featured__text">
             <h3>UI/UX Design, Front End development</h3>
-            <Fade top cascade delay={600} duration={500}>
+            <Fade top cascade delay={400} duration={500}>
               <h2>Capoeira Espirito Livre</h2>
             </Fade>
             <p>Web application for a sport and cultural association</p>
             <div className="featured__cta">
               <OnWebBtn
-                to="featuredWork"
+                to="https://cel-capoeira.com"
                 text="Visit site"
                 type="primary"
                 className="featured__cta--button"
               />
               <OnSiteBtn
-                to="featuredWork"
+                to="/page-2"
                 text="Case Study"
                 type="primary"
                 className="featured__cta--button"
@@ -70,10 +70,10 @@ const IndexPage = ({ data }) => (
           className="featured__img"
           fluid={data.portfolioImage.childImageSharp.fluid}
         />
-        <Fade delay={400}>
+        <Fade delay={200}>
           <div className="featured__text">
             <h3>UI/UX Design, Front End development</h3>
-            <Fade top cascade delay={600} duration={500}>
+            <Fade top cascade delay={400} duration={500}>
               <h2>Personal Portfolio</h2>
             </Fade>
             <p>A simple, minimalist site for personal branding</p>
@@ -85,7 +85,7 @@ const IndexPage = ({ data }) => (
                 className="featured__cta--button"
               />
               <OnWebBtn
-                to="featuredWork"
+                to="https://github.com/gaaabor/Portfolio"
                 text="Code on Github"
                 type="primary"
                 className="featured__cta--button"
@@ -96,10 +96,10 @@ const IndexPage = ({ data }) => (
       </div>
 
       <div className="featured__item fluent">
-        <Fade delay={400}>
+        <Fade delay={200}>
           <div className="featured__text">
             <h3>UI/UX Design, Front End development</h3>
-            <Fade top cascade delay={600} duration={500}>
+            <Fade top cascade delay={400} duration={500}>
               <h2>FLUENT ACRHITECT & DESIGN</h2>
             </Fade>
             <p>Landing page for a fictional architect's company</p>
@@ -125,10 +125,10 @@ const IndexPage = ({ data }) => (
         />
       </div>
     </section>
-    <section className="about" id="about">
+    <section id="about">
       <h2 className="heading">Skills and Services</h2>
       <div className="skills__table">
-        <Fade duration={500} delay={500} fraction={0.9}>
+        <Fade duration={500} delay={300} fraction={0.9}>
           <div className="skills__col">
             <p className="skills__item">React</p>
             <p className="skills__item">JavaScript</p>
@@ -212,7 +212,7 @@ const IndexPage = ({ data }) => (
           />
         </div>
         <OnWebBtn
-          to="featuredWork"
+          to="https://drive.google.com/file/d/1jKlmSWqessZ7W35ZY27Oa7iZemN0rtke/view?usp=sharing"
           text="Download My Resume"
           type="primary"
           className="about__resume-btn"
@@ -225,9 +225,20 @@ const IndexPage = ({ data }) => (
         <br />
         If you are interested about my services let's talk, contact me at:
       </p>
-      <Fade top cascade duration={1000} delay={500}>
-        <h3 className="contact__email">gaabor.bencsik@gmail.com</h3>
-      </Fade>
+
+      <h3 className="contact__email">
+        <Fade top cascade duration={1000} delay={500}>
+          <a
+            href="mailto:hello@gaborbencsik.me"
+            className="contact__email"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            hello@gaborbencsik.me
+          </a>
+        </Fade>
+      </h3>
+
       <p className="contact__text">or</p>
       <footer>
         <OnWebBtn
@@ -253,7 +264,7 @@ export const homeQuery = graphql`
   query {
     aboutImage: file(relativePath: { eq: "about.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, quality: 80) {
+        fluid(maxWidth: 500, quality: 80) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

@@ -1,10 +1,16 @@
 .hero {
    min-height: 95vh;
+   @include respond(laptop-lg) {
+      min-height: 92vh;
+   }
    display: flex;
    flex-direction: column;
    &__main {
       margin: 0 auto;
       padding: 15vh;
+      @include respond(laptop-lg) {
+         padding: 8vh;
+      }
    }
    &__title {
       font-family: $font-secondary;
@@ -23,6 +29,9 @@
       }
       &--bottom {
          margin-left: auto;
+         @include respond(tab-lg) {
+            margin-left: 0;
+         }
          font-size: 1.9rem;
          padding-top: 7vh;
          font-family: $font-primary;
@@ -57,11 +66,19 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 18rem;
+      @include respond(tab-lg) {
+         flex-direction: column;
+         margin-bottom: 10rem;
+      }
    }
    &__text {
-      margin: auto 0 auto 4rem;
+      align-self: center;
       font-family: $font-primary;
-      flex-basis: 40%;
+      margin-left: 5%;
+      @include respond(tab-lg) {
+         margin-left: 0;
+         margin-bottom: 4rem;
+      }
       h2 {
          font-size: 2.7rem;
          font-weight: 900;
@@ -78,15 +95,32 @@
       }
    }
    &__text:nth-of-type(2) {
-      margin: auto -14rem auto 0;
+      margin-right: 5% !important;
+      @include respond(tab-lg) {
+         margin-right: 0;
+      }
+      @include respond(tab-lg) {
+         order: -1;
+      }
    }
    &__img {
-      flex-basis: 47%;
+      flex-basis: 50%;
+      @include respond(tab-lg) {
+         width: 60vw;
+         align-self: center;
+      }
    }
    &__cta {
       padding-top: 2rem;
+      @include respond(tab-lg) {
+         display: flex;
+         justify-content: space-evenly;
+      }
       &--button {
          margin-right: 3.5rem;
+         @include respond(tab-lg) {
+            margin-right: 0;
+         }
       }
    }
 }
@@ -114,11 +148,13 @@
 }
 
 .about {
-   margin-bottom: 30rem;
    &__container {
       display: flex;
       justify-content: space-between;
       margin-top: 8rem;
+      @include respond(tab-lg) {
+         flex-direction: column;
+      }
    }
    &__text {
       flex-basis: 50%;
@@ -128,9 +164,17 @@
       &-section {
          margin-bottom: 4.5rem;
       }
+      @include respond(tab-lg) {
+         text-align: left !important;
+      }
    }
    &__img {
-      flex-basis: 35%;
+      flex-basis: 50%;
+      max-width: 46rem;
+      @include respond(tab-lg) {
+         width: 40rem;
+         align-self: center;
+      }
    }
    &__resume-btn {
       display: block !important;
@@ -140,7 +184,11 @@
 }
 
 .contact {
-   margin-bottom: 25rem;
+   min-height: 70vh;
+   margin-top: 20vh;
+   @include respond(tab-lg) {
+      min-height: 50vh;
+   }
    &__text {
       font-size: 3rem;
       font-weight: 300;
@@ -154,6 +202,9 @@
       font-weight: 300;
       text-align: center;
       margin: 5rem 0;
+      a {
+         text-decoration: none;
+      }
    }
    &__link {
       font-size: 1.6rem;
