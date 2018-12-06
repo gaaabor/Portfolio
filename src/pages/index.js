@@ -39,9 +39,9 @@ const IndexPage = ({ data }) => (
         <Fade delay={200}>
           <div className="featured__text">
             <h3>UI/UX Design, Front End development</h3>
-            <Fade top cascade delay={400} duration={500}>
-              <h2>Capoeira Espirito Livre</h2>
-            </Fade>
+            {/* <Fade top cascade delay={400} duration={500}> */}
+            <h2>Capoeira Espirito Livre</h2>
+            {/* </Fade> */}
             <p>Web application for a sport and cultural association</p>
             <div className="featured__cta">
               <OnWebBtn

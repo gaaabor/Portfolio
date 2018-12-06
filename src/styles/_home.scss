@@ -11,11 +11,20 @@
       @include respond(laptop-lg) {
          padding: 8vh;
       }
+      @include respond(tab-sm) {
+         padding: 3vh 0;
+      }
    }
    &__title {
       font-family: $font-secondary;
       white-space: nowrap;
       font-size: 10rem;
+      @include respond(tab-lg) {
+         font-size: 11vw;
+      }
+      @include respond(phone-lg) {
+         font-size: 15vw;
+      }
       font-weight: 300;
       color: $color-primary;
    }
@@ -109,6 +118,9 @@
          width: 60vw;
          align-self: center;
       }
+      @include respond(phone-sm) {
+         width: 90vw;
+      }
    }
    &__cta {
       padding-top: 2rem;
@@ -172,7 +184,7 @@
       flex-basis: 50%;
       max-width: 46rem;
       @include respond(tab-lg) {
-         width: 40rem;
+         width: 85vw;
          align-self: center;
       }
    }
