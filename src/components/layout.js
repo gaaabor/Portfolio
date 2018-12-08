@@ -31,8 +31,8 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Menu
-          menuOpenButton={<FiMenu />}
-          menuCloseButton={<FiX />}
+          menuOpenButton={<p>Menu</p>}
+          menuCloseButton={<p>Close</p>}
           changeMenuOn="1000px"
           largeMenuClassName="menu__big"
           smallMenuClassName="menu__small"
