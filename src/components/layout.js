@@ -30,7 +30,34 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Menu
+        <div className="menu">
+          <Anchor to="hero" spy={true} smooth={true} duration={700}>
+            home
+          </Anchor>
+          <Anchor to="featured" spy={true} smooth={true} duration={700}>
+            work
+          </Anchor>
+          <Anchor to="about" spy={true} smooth={true} duration={700}>
+            about
+          </Anchor>
+          <Anchor to="contact" spy={true} smooth={true} duration={700}>
+            contact
+          </Anchor>
+        </div>
+        <div className="app__container">{children}</div>
+      </div>
+    )}
+  />
+)
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export default Layout
+
+{
+  /* <Menu
           menuOpenButton={<p>Menu</p>}
           menuCloseButton={<p>Close</p>}
           changeMenuOn="1000px"
@@ -52,15 +79,5 @@ const Layout = ({ children }) => (
               </Anchor>
             </div>
           }
-        />
-        <div className="app__container">{children}</div>
-      </div>
-    )}
-  />
-)
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+        /> */
 }
-
-export default Layout

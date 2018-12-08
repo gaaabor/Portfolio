@@ -1,21 +1,38 @@
 .menu {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  &__big,
-  &__small {
-    font-family: $font-primary;
-    font-size: 1.9rem;
-    font-weight: 400;
-    position: fixed;
-    right: 4rem;
-    top: 3rem;
-    cursor: pointer;
-  }
-  a.active {
-    font-weight: 900;
-  }
-  a:hover {
-    color: $color-primary;
-  }
+   display: flex;
+   flex-direction: column;
+   text-align: right;
+   font-family: $font-primary;
+   font-size: 1.9rem;
+   font-weight: 400;
+   position: fixed;
+   right: 4rem;
+   top: 3rem;
+   cursor: pointer;
+   @include respond(tab-sm) {
+      width: 100%;
+      flex-direction: row;
+      text-align: center;
+      justify-content: space-evenly;
+      font-weight: 400;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+   }
+   a {
+      @include respond(tab-sm) {
+         display: flex;
+         justify-content: center;
+         padding: 1rem;
+         width: 25%;
+         border: 1px solid $color-black;
+         background-color: $color-primary;
+      }
+   }
+   a.active {
+      font-weight: 900;
+   }
+   a:hover {
+      color: $color-primary;
+   }
 }
