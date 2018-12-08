@@ -176,49 +176,51 @@ const IndexPage = ({ data }) => (
             fluid={data.aboutImage.childImageSharp.fluid}
           />
         </div>
-        <OnWebBtn
-          to="https://drive.google.com/file/d/1jKlmSWqessZ7W35ZY27Oa7iZemN0rtke/view?usp=sharing"
-          text="Download My Resume"
-          type="primary"
-          className="about__resume-btn"
-        />
       </div>
+      <OnWebBtn
+        to="https://drive.google.com/file/d/1jKlmSWqessZ7W35ZY27Oa7iZemN0rtke/view?usp=sharing"
+        text="Download My Resume"
+        type="primary"
+        className="about__resume-btn"
+      />
     </section>
     <section className="contact" id="contact">
-      <p className="contact__text">
-        I'm currently looking for a full-time position in Prague.
-        <br />
-        If you are interested about my services let's talk, contact me at:
-      </p>
+      <div className="contact__container">
+        <p className="contact__text">
+          I'm currently looking for a full-time position in Prague.
+          <br />
+          If you are interested about my services let's talk, contact me at:
+        </p>
 
-      <h3 className="contact__email">
-        <Fade top cascade duration={1000} delay={500}>
-          <a
-            href="mailto:hello@gaborbencsik.me"
-            className="contact__email"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            hello@gaborbencsik.me
-          </a>
-        </Fade>
-      </h3>
+        <h3 className="contact__email">
+          <Fade top cascade duration={1000} delay={500}>
+            <a
+              href="mailto:hello@gaborbencsik.me"
+              className="contact__email"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              hello@gaborbencsik.me
+            </a>
+          </Fade>
+        </h3>
 
-      <p className="contact__text">or</p>
-      <footer>
-        <OnWebBtn
-          to="https://www.linkedin.com/in/gabor-bencsik/"
-          text="LinkedIn"
-          type="link"
-          className="contact__link"
-        />
-        <OnWebBtn
-          to="https://github.com/gaaabor"
-          text="Github"
-          type="link"
-          className="contact__link"
-        />
-      </footer>
+        <p className="contact__text">or</p>
+        <footer>
+          <OnWebBtn
+            to="https://www.linkedin.com/in/gabor-bencsik/"
+            text="LinkedIn"
+            type="link"
+            className="contact__link"
+          />
+          <OnWebBtn
+            to="https://github.com/gaaabor"
+            text="Github"
+            type="link"
+            className="contact__link"
+          />
+        </footer>
+      </div>
     </section>
   </Layout>
 )

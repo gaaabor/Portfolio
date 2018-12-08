@@ -1,7 +1,5 @@
 .featured {
-  @include respond(tab-lg) {
-    padding-top: 3rem;
-  }
+  padding-top: 3rem;
   &__item {
     display: flex;
     justify-content: space-between;

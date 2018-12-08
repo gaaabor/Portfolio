@@ -1,9 +1,8 @@
 .contact {
-  min-height: 70vh;
-  margin-top: 20vh;
-  @include respond(tab-lg) {
-    min-height: 50vh;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   &__text {
     font-size: 3rem;
     font-weight: 300;
