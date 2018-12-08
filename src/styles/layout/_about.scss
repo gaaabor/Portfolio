@@ -7,10 +7,14 @@
     display: flex;
     margin: 8rem auto;
     justify-content: center;
+    justify-content: space-between;
+    width: 40rem;
+    @include respond(phone-lg) {
+      width: 90vw;
+    }
   }
   &__col {
     display: flex;
-    margin-left: 5rem;
     flex-direction: column;
   }
   &__item {

@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { Link as Anchor } from 'react-scroll'
 import { StaticQuery, graphql } from 'gatsby'
 import Menu from 'react-responsive-navbar'
+import { FiMenu, FiX } from 'react-icons/fi'
 
 import '../styles/main.scss'
 
@@ -30,8 +31,8 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Menu
-          menuOpenButton={<p>MENU</p>}
-          menuCloseButton={<p>MENU</p>}
+          menuOpenButton={<FiMenu />}
+          menuCloseButton={<FiX />}
           changeMenuOn="1000px"
           largeMenuClassName="menu__big"
           smallMenuClassName="menu__small"

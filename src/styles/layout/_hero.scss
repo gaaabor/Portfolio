@@ -3,6 +3,9 @@
   @include respond(laptop-lg) {
     min-height: 92vh;
   }
+  @include respond(tab-sm) {
+    min-height: 83vh;
+  }
   display: flex;
   flex-direction: column;
   &__main {
