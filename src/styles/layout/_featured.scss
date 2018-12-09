@@ -1,7 +1,7 @@
 .featured {
    padding-top: 3rem;
    @include respond(tab-sm) {
-      padding-top: 6rem;
+      padding-top: 7.5rem;
    }
    &__item {
       display: flex;
