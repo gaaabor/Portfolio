@@ -1,5 +1,8 @@
 .featured {
   padding-top: 3rem;
+  @include respond(tab-sm) {
+    padding-top: 6rem;
+  }
   &__item {
     display: flex;
     justify-content: space-between;
@@ -13,11 +16,16 @@
     .featured__text {
       margin-right: 5% !important;
       @include respond(tab-lg) {
-        margin-right: 0;
+        margin-right: 0 !important;
       }
     }
     .featured__img {
       order: -1;
+    }
+    @include respond(tab-sm) {
+      .featured__img {
+        order: 0;
+      }
     }
   }
   &__text {
@@ -39,7 +47,7 @@
       font-weight: 300;
     }
     p {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 300;
     }
   }

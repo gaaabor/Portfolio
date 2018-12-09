@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade'
+import { Link as Anchor, animateScroll as scroll } from 'react-scroll'
 
 import Layout from '../components/layout'
 import OnPageBtn from '../components/OnPageBtn'
@@ -10,13 +11,33 @@ import OnWebBtn from '../components/OnWebBtn'
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <div className="menu">
+      <Anchor to="hero" spy={true} smooth={true} duration={700}>
+        home
+      </Anchor>
+      <Anchor to="featured" spy={true} smooth={true} duration={700}>
+        work
+      </Anchor>
+      <Anchor to="about" spy={true} smooth={true} duration={700}>
+        about
+      </Anchor>
+      <Anchor
+        to="contact"
+        spy={true}
+        smooth={true}
+        duration={700}
+        onSetActive={() => scroll.scrollToBottom()}
+      >
+        contact
+      </Anchor>
+    </div>
     <section className="hero" id="hero">
       <Fade duration={1000}>
         <p className="hero__text--top">Hello, my name is</p>
       </Fade>
 
       <div className="hero__main">
-        <Fade top cascade duration={1000} delay={400}>
+        <Fade top cascade duration={800} delay={400}>
           <h1 className="hero__title">Gabor Bencsik</h1>
         </Fade>
       </div>
@@ -47,7 +68,7 @@ const IndexPage = ({ data }) => (
           className="featured__cta--button"
         />
         <OnSiteBtn
-          to="/page-2"
+          to="/projects/cel"
           text="Case Study"
           type="primary"
           className="featured__cta--button"
@@ -193,7 +214,7 @@ const IndexPage = ({ data }) => (
         </p>
 
         <h3 className="contact__email">
-          <Fade top cascade duration={1000} delay={500}>
+          <Fade top cascade duration={800} delay={300}>
             <a
               href="mailto:hello@gaborbencsik.me"
               className="contact__email"
