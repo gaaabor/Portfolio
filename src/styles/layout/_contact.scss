@@ -1,35 +1,38 @@
 .contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  &__text {
-    font-size: 3rem;
-    font-weight: 300;
-    font-style: italic;
-    text-align: center;
-  }
-  &__email {
-    font-size: 7rem;
-    font-family: $font-secondary;
-    color: $color-primary;
-    font-weight: 300;
-    text-align: center;
-    margin: 5rem 0;
-    white-space: nowrap;
-    @include respond(tab-lg) {
-      font-size: 9vw;
-    }
-    a {
-      text-decoration: none;
-    }
-  }
-  &__link {
-    font-size: 1.6rem;
-    padding: 2rem;
-  }
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 70vh;
+   @include respond(laptop-lg) {
+      height: 100vh;
+   }
+   &__text {
+      font-size: 3rem;
+      font-weight: 300;
+      font-style: italic;
+      text-align: center;
+   }
+   &__email {
+      font-size: 7rem;
+      font-family: $font-secondary;
+      color: $color-primary;
+      font-weight: 300;
+      text-align: center;
+      margin: 5rem 0;
+      white-space: nowrap;
+      @include respond(tab-lg) {
+         font-size: 9vw;
+      }
+      a {
+         text-decoration: none;
+      }
+   }
+   &__link {
+      font-size: 1.6rem;
+      padding: 2rem;
+   }
 }
 
 footer {
-  text-align: center;
+   text-align: center;
 }

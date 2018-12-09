@@ -20,7 +20,7 @@
   }
 }
 
-@include respond(tab-sm) {
+@include respond(tab-lg) {
   .menu {
     width: 100%;
     flex-direction: row;

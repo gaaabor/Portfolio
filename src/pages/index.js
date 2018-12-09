@@ -198,14 +198,14 @@ const IndexPage = ({ data }) => (
           />
         </div>
       </div>
+    </section>
+    <section className="contact" id="contact">
       <OnWebBtn
         to="https://drive.google.com/file/d/1jKlmSWqessZ7W35ZY27Oa7iZemN0rtke/view?usp=sharing"
         text="Download My Resume"
         type="primary"
         className="about__resume-btn"
       />
-    </section>
-    <section className="contact" id="contact">
       <div className="contact__container">
         <p className="contact__text">
           I'm currently looking for a full-time position in Prague.
