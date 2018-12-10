@@ -80,12 +80,6 @@ const IndexPage = ({ data }) => (
         text="A simple, minimalist site for personal branding"
         fluid={data.portfolioImage.childImageSharp.fluid}
       >
-        <OnSiteBtn
-          to="featuredWork"
-          text="View Project"
-          type="primary"
-          className="featured__cta--button"
-        />
         <OnWebBtn
           to="https://github.com/gaaabor/Portfolio"
           text="Code on Github"
@@ -100,13 +94,13 @@ const IndexPage = ({ data }) => (
         fluid={data.fluentImage.childImageSharp.fluid}
       >
         <OnWebBtn
-          to="featuredWork"
+          to="https://fluentacrhitect.netlify.com"
           text="Visit site"
           type="primary"
           className="featured__cta--button"
         />
         <OnWebBtn
-          to="featuredWork"
+          to="https://github.com/gaaabor/Fluent--Acrhitect-Design"
           text="Code on Github"
           type="primary"
           className="featured__cta--button"
@@ -159,15 +153,8 @@ const IndexPage = ({ data }) => (
                   type="link"
                   className="about__link"
                 />
-                . If you would like to know more about my education and skills,
-                than head over to my{' '}
-                <OnWebBtn
-                  to="https://www.linkedin.com/in/gabor-bencsik/"
-                  text="LinkedIn"
-                  type="link"
-                  className="about__link"
-                />{' '}
-                profile, or download my resume.
+                . If you would like to know more about my work history and
+                skills, please download my resume below.
               </p>
             </Fade>
             <Fade delay={900}>
@@ -201,7 +188,7 @@ const IndexPage = ({ data }) => (
     </section>
     <section className="contact" id="contact">
       <OnWebBtn
-        to="https://drive.google.com/file/d/1jKlmSWqessZ7W35ZY27Oa7iZemN0rtke/view?usp=sharing"
+        to="https://drive.google.com/open?id=1iFJB1vIllq5awsxxlmJyTDartbo9_Bg9"
         text="Download My Resume"
         type="primary"
         className="about__resume-btn"

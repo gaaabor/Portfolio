@@ -16,8 +16,9 @@ html {
 body {
   box-sizing: border-box;
   background-color: #f8f8ff;
-  background-image: url('https://www.transparenttextures.com/patterns/little-pluses.png'); // background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png'); // background-image: url('../images/background.png');
+  background-image: url('../images/background.png');
   font-family: $font-primary;
+  line-height: 1.2;
   @include respond(tab-lg) {
     text-align: center;
   }
@@ -63,3 +64,5 @@ body {
   font-weight: 300;
   color: $color-primary;
 }
+
+// background-image: url('https://www.transparenttextures.com/patterns/little-pluses.png'); background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png')
