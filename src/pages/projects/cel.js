@@ -105,7 +105,7 @@ const celCaseStudy = ({ data }) => (
         </p>
       </div>
       <OnSiteBtn
-        to="/"
+        to="/#featured"
         text="Back to the homepage"
         type="link"
         className="cel__link"

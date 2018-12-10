@@ -137,7 +137,7 @@ const IndexPage = ({ data }) => (
             <Fade delay={300}>
               <p className="about__text-section">
                 Main area of my expertise is to develop performant and
-                user-friendly web apps whilst maintaining semantic, clean markup
+                user-friendly web apps whilst maintaining clean markup, scalable
                 and SEO friendly code. I’m also interested in design, I have a
                 passion for clean aesthetics, minimalism, unusual typography and
                 simplistic UX solutions.
