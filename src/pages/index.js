@@ -138,7 +138,7 @@ const IndexPage = ({ data }) => (
               <p className="about__text-section">
                 Main area of my expertise is to develop performant and
                 user-friendly web apps whilst maintaining clean markup, scalable
-                and SEO friendly code. I’m also interested in design, I have a
+                and SEO friendly code. I’m also interested in design and have a
                 passion for clean aesthetics, minimalism, unusual typography and
                 simplistic UX solutions.
               </p>
@@ -146,7 +146,7 @@ const IndexPage = ({ data }) => (
             <Fade delay={600}>
               <p className="about__text-section">
                 For other CSSGrid and Flexbox layouts, as well as small
-                JavaScript apps and games please visit my{' '}
+                JavaScript apps and games, please visit my{' '}
                 <OnWebBtn
                   to="https://github.com/gaaabor"
                   text="Github"
@@ -159,7 +159,7 @@ const IndexPage = ({ data }) => (
             </Fade>
             <Fade delay={900}>
               <p className="about__text-section">
-                In my personal life I'm passionet about capoeira for over 10
+                In my personal life I'm passionate about capoeira for over 10
                 years now, check out my{' '}
                 <OnWebBtn
                   to="https://www.instagram.com/faisca_cel/"
@@ -188,7 +188,7 @@ const IndexPage = ({ data }) => (
     </section>
     <section className="contact" id="contact">
       <OnWebBtn
-        to="https://drive.google.com/open?id=1iFJB1vIllq5awsxxlmJyTDartbo9_Bg9"
+        to="https://drive.google.com/open?id=1jaJlTK9kZEexLPUGR2QFPHfGObWAGypY"
         text="Download My Resume"
         type="primary"
         className="about__resume-btn"

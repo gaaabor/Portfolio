@@ -37,7 +37,7 @@ const celCaseStudy = ({ data }) => (
         <Fade>
           <p className="cel__details-text">
             Based on the researches we did, it was clear that our target
-            audience will interact mostly from mobile devices with the website.
+            audience will interact mostly from mobile devices with our website.
             Therefore responsive design, and the same look and feel across every
             screen size was my priority while developing the application.
           </p>
@@ -65,10 +65,9 @@ const celCaseStudy = ({ data }) => (
           </Fade>
           <Fade delay={800}>
             <p>
-              As is a progressive web app it loads instantly, enhanced with
-              Service Workers to work offline, either in the browser or as an
-              installed application. Take a look the our Google Audits test
-              below.
+              As a progressive web app it loads instantly, enhanced with Service
+              Workers to work offline, either in the browser or as an installed
+              application. Take a look at the our Google Audits test below.
             </p>
           </Fade>
           <Img
