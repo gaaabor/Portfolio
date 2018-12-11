@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => (
       </FeaturedItem>
 
       <FeaturedItem
-        title="FLUENT ACRHITECT & DESIGN"
+        title="FLUENT ARCHITECT & DESIGN"
         text="Landing page for a fictional architect company"
         fluid={data.fluentImage.childImageSharp.fluid}
       >
