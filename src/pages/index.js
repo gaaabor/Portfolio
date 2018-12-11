@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => (
 
       <Fade duration={1000}>
         <p className="hero__text--bottom">
-          I'm a Front End developer based in Prague.
+          I'm a Front-End developer based in Prague.
           <br /> I build and design clean and responsive web apps.
         </p>
       </Fade>
@@ -90,7 +90,7 @@ const IndexPage = ({ data }) => (
 
       <FeaturedItem
         title="FLUENT ACRHITECT & DESIGN"
-        text="Landing page for a fictional architect's company"
+        text="Landing page for a fictional architect company"
         fluid={data.fluentImage.childImageSharp.fluid}
       >
         <OnWebBtn
@@ -159,7 +159,7 @@ const IndexPage = ({ data }) => (
             </Fade>
             <Fade delay={900}>
               <p className="about__text-section">
-                In my personal life I'm passionate about capoeira for over 10
+                In my personal life I've been training capoeira for over 10
                 years now, check out my{' '}
                 <OnWebBtn
                   to="https://www.instagram.com/faisca_cel/"
@@ -267,7 +267,7 @@ const FeaturedItem = props => (
   <div className="featured__item">
     <Fade delay={200}>
       <div className="featured__text">
-        <h3>UI/UX Design, Front End development</h3>
+        <h3>UI/UX Design, Front-End development</h3>
         <Fade top cascade delay={400} duration={500}>
           <h2>{props.title}</h2>
         </Fade>
