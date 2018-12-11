@@ -188,7 +188,7 @@ const IndexPage = ({ data }) => (
     </section>
     <section className="contact" id="contact">
       <OnWebBtn
-        to="https://drive.google.com/open?id=1jaJlTK9kZEexLPUGR2QFPHfGObWAGypY"
+        to="https://drive.google.com/open?id=1WqCbLqofCCuE8ext8_5inEdoLrBTpx_Y"
         text="Download My Resume"
         type="primary"
         className="about__resume-btn"
