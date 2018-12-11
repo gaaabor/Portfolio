@@ -1,93 +1,99 @@
 .cel {
-   &__hero {
-      min-height: 95vh;
+  &__hero {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    &-title {
+      padding-top: 2rem;
+      font-family: $font-secondary;
+      font-size: 7.5rem;
+      font-weight: 300;
+      color: $color-primary;
+    }
+    &-text {
+      margin: auto;
+      padding-bottom: 7rem;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.9;
+    }
+    @include respond(tab-lg) {
+      margin-top: 5rem;
+      min-height: 80vh;
+    }
+  }
+  &__details {
+    margin-top: 8rem;
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      @include respond(tab-lg) {
+        flex-direction: column;
+      }
+    }
+    &-text {
+      flex-basis: 50%;
+      min-width: 300px;
+      align-self: center;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.9;
       display: flex;
       flex-direction: column;
-      &-title {
-         padding-top: 2rem;
-         font-family: $font-secondary;
-         font-size: 7.5rem;
-         font-weight: 300;
-         color: $color-primary;
-      }
-      &-text {
-         margin: auto;
-         padding-bottom: 7rem;
-         font-size: 2rem;
-         font-weight: 300;
-         line-height: 1.9;
-      }
       @include respond(tab-lg) {
-         margin-top: 5rem;
-         min-height: 80vh;
+        margin-bottom: 5rem;
       }
-   }
-   &__details {
-      margin-top: 8rem;
-      &-item {
-         display: flex;
-         justify-content: space-between;
-         @include respond(tab-lg) {
-            flex-direction: column;
-         }
+      &-section {
+        margin-bottom: 4.5rem;
       }
-      &-text {
-         flex-basis: 50%;
-         min-width: 300px;
-         align-self: center;
-         font-size: 2rem;
-         font-weight: 300;
-         line-height: 1.9;
-         display: flex;
-         flex-direction: column;
-         @include respond(tab-lg) {
-            margin-bottom: 5rem;
-         }
-         &-section {
-            margin-bottom: 4.5rem;
-         }
-         p:last-of-type {
-            margin-top: 3rem;
-            margin-bottom: 6rem;
-         }
+      p:last-of-type {
+        margin-top: 3rem;
+        margin-bottom: 6rem;
       }
-      &-img {
-         width: 45rem;
-         height: 100%;
-         @include respond(tab-lg) {
-            align-self: center;
-            width: 70%;
-            margin-bottom: 5rem;
-         }
+    }
+    &-img {
+      width: 45rem;
+      height: 100%;
+      @include respond(tab-lg) {
+        align-self: center;
+        width: 70%;
+        margin-bottom: 5rem;
       }
-   }
-   &__cta {
-      text-align: center;
-      margin: 10rem 0;
-      &--button {
-         margin: 0 2rem;
+    }
+  }
+  &__cta {
+    text-align: center;
+    margin: 10rem 0;
+    &--button {
+      margin: 0 2rem;
+    }
+  }
+  &__testimonial {
+    padding-bottom: 17rem;
+    &-text {
+      font-size: 3.5rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.3;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+      @include respond(laptop-sm) {
+        font-size: 3rem;
       }
-   }
-   &__testimonial {
-      padding-bottom: 17rem;
-      &-text {
-         font-size: 3.5rem;
-         font-weight: 300;
-         font-style: italic;
-         line-height: 1.3;
-         letter-spacing: 0.5px;
-         margin-bottom: 1.5rem;
+      @include respond(tab-sm) {
+        font-size: 2.5rem;
       }
-      &-author {
-         font-size: 2rem;
-      }
-      &-title {
-         font-size: 2rem;
-         opacity: 0.6;
-      }
-   }
-   &__link {
-      font-size: 1.8rem;
-      padding-bottom: 4rem;
-   }
+    }
+    &-author {
+      font-size: 2rem;
+    }
+    &-title {
+      font-size: 2rem;
+      opacity: 0.6;
+    }
+  }
+  &__link {
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
+  }
 }

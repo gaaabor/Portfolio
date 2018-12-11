@@ -92,11 +92,12 @@ const celCaseStudy = ({ data }) => (
       </div>
       <div className="cel__testimonial">
         <p className="cel__testimonial-text">
-          "As a freelance collective, we work with a team of freelance
-          professionals. For us it is imperative that as we can always depend on
-          every team member to give their best. What we really like about Gabor
-          is that he gives us the confidence, not only to do an excellent job,
-          but to rise above it and strive for the next level."
+          "Entrusting our website to Gabor was one of the best managing choices
+          I've ever made. He is focused and determined in every single way
+          beyond measure! Not even the smallest detail could escape his notice,
+          and he was always willing and able to find the best solution to the
+          problems. I think he took perfectionism to a new level, and each time
+          it was necessary he was always ready to start things all over again!"
         </p>
         <p className="cel__testimonial-author">Krisztián Oláh</p>
         <p className="cel__testimonial-title">
@@ -118,7 +119,11 @@ export default celCaseStudy
 export const homeQuery = graphql`
   query {
     celLaptopImage: file(relativePath: { eq: "cel-laptop.png" }) {
-      ...wideImage
+      childImageSharp {
+        fluid(maxWidth: 1400, quality: 80) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
     celPhoneOneImage: file(relativePath: { eq: "cel-phone-1.jpg" }) {
       ...phoneImage
@@ -126,14 +131,11 @@ export const homeQuery = graphql`
     celPhoneTwoImage: file(relativePath: { eq: "cel-phone-2.jpg" }) {
       ...phoneImage
     }
-    celAuditsImage: file(relativePath: { eq: "audits.jpg" }) {
-      ...wideImage
-    }
-  }
-  fragment wideImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1400, quality: 80) {
-        ...GatsbyImageSharpFluid
+    celAuditsImage: file(relativePath: { eq: "cel-audits.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 700, quality: 80) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

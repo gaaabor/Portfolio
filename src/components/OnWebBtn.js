@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const onPageBtn = props => (
   <a
@@ -13,8 +12,3 @@ const onPageBtn = props => (
 )
 
 export default onPageBtn
-
-onPageBtn.propTypes = {
-  to: PropTypes.string,
-  text: PropTypes.string,
-}

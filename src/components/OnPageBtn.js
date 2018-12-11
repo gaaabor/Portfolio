@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { Link as Anchor } from 'react-scroll'
 
@@ -16,8 +15,3 @@ const onPageBtn = props => (
 )
 
 export default onPageBtn
-
-onPageBtn.propTypes = {
-  to: PropTypes.string,
-  text: PropTypes.string,
-}
