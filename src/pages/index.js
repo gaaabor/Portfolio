@@ -195,7 +195,7 @@ const IndexPage = ({ data }) => (
       />
       <div className="contact__container">
         <p className="contact__text">
-          I'm currently looking for a full-time position in Prague.
+          I'm currently working in a full-time position in Prague.
           <br />
           If you are interested about my services let's talk, contact me at:
         </p>
