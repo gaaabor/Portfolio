@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Gabor Bencsik <gaabor.bencsik@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.0.19",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-manifest": "^2.0.5",
